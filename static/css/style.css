@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    height: 100vh;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.chat-messages {
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    background-color: #f8f9fa;
+}
+
+.message {
+    margin-bottom: 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.user-message {
+    background: #007bff;
+    color: white;
+    border-radius: 18px 18px 4px 18px;
+    margin-left: auto;
+}
+
+.bot-message {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 18px 18px 18px 4px;
+    margin-right: auto;
+}
+
+.query-preview {
+    background: #e9ecef;
+    border-left: 4px solid #007bff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85em;
+}
+
+.results-summary {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.chart-container {
+    position: relative;
+    height: 200px;
+    margin: 1rem 0;
+}
+
+.table-responsive {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.welcome-message {
+    padding: 3rem 1rem;
+    opacity: 0.7;
+}
+
+.example-question {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.example-question:hover {
+    background-color: #007bff !important;
+    color: white !important;
+    transform: translateX(5px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-top: 1px solid #dee2e6;
+}
