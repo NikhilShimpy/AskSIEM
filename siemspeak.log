@@ -851,3 +851,45 @@ TypeError: Object of type int64 is not JSON serializable
 2025-10-11 19:15:14,512 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:15:14] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
 2025-10-11 19:15:14,512 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:15:14] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
 2025-10-11 19:15:14,606 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:15:14] "GET /conversation HTTP/1.1" 200 -
+2025-10-11 19:37:27,224 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 19:37:27,227 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 19:37:28,013 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 19:37:28,931 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 19:37:28,937 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 19:40:24,817 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:24] "GET /dashboard HTTP/1.1" 200 -
+2025-10-11 19:40:25,060 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
+2025-10-11 19:40:25,071 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-10-11 19:40:25,072 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 19:40:25,081 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-10-11 19:40:25,083 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-10-11 19:40:25,085 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-10-11 19:40:25,116 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:25] "GET /conversation HTTP/1.1" 200 -
+2025-10-11 19:40:30,737 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-11 19:40:30,772 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-11 19:40:30,826 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:40:30,827 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:40:30,828 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:30] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:40:30,829 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:30] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:40:36,096 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-11 19:40:36,115 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:40:36,118 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:36] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:40:51,766 - __main__ - INFO - Processing query: Suspicious network activity
+2025-10-11 19:40:51,781 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:40:51,782 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:51] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:40:51,829 - __main__ - INFO - Processing query: Suspicious network activity
+2025-10-11 19:40:51,847 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:40:51,849 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:51] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:40:59,173 - __main__ - INFO - Processing query: Suspicious network activity
+2025-10-11 19:40:59,189 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:40:59,190 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:40:59] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:41:10,684 - __main__ - INFO - Processing query: Display successful logins by country
+2025-10-11 19:41:10,700 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:41:10,701 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:41:10] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:41:10,715 - __main__ - INFO - Processing query: Display successful logins by country
+2025-10-11 19:41:10,734 - __main__ - INFO - Query processed successfully. Found 306 events
+2025-10-11 19:41:10,737 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:41:10] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 19:46:33,789 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 19:46:33,790 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 19:46:34,195 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 19:46:35,104 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 19:46:35,108 - werkzeug - INFO -  * Debugger PIN: 122-809-695

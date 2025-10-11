@@ -16,11 +16,77 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/charts.css') }}" rel="stylesheet">
+    
+    <style>
+        .sidebar {
+            transition: all 0.3s ease;
+        }
+        .sidebar.collapsed {
+            margin-left: -250px;
+        }
+        .main-content {
+            transition: all 0.3s ease;
+        }
+        .main-content.expanded {
+            margin-left: 0;
+            width: 100%;
+        }
+        .filter-toggle {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-toggle:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .advanced-filters {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .chart-container-sm {
+            position: relative;
+            height: 200px;
+            width: 100%;
+        }
+        .insight-card {
+            border-left: 4px solid;
+            padding-left: 10px;
+        }
+        .insight-card.warning { border-left-color: #ffc107; }
+        .insight-card.danger { border-left-color: #dc3545; }
+        .insight-card.info { border-left-color: #0dcaf0; }
+        .insight-card.success { border-left-color: #198754; }
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+        }
+        .user-message {
+            background-color: rgba(13, 110, 253, 0.1);
+            border-left: 4px solid #0d6efd;
+        }
+        .bot-message {
+            background-color: rgba(33, 37, 41, 0.5);
+            border-left: 4px solid #6c757d;
+        }
+        .error-message {
+            background-color: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid #dc3545;
+        }
+    </style>
 </head>
 <body class="bg-dark">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
         <div class="container-fluid">
+            <button class="btn btn-outline-light btn-sm me-3" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
             <a class="navbar-brand fw-bold" href="/">
                 <i class="fas fa-shield-alt me-2"></i>
                 SIEMSpeak Enterprise
@@ -62,7 +128,7 @@
     <div class="container-fluid mt-5 pt-3">
         <div class="row">
             <!-- Sidebar -->
-            <div class="col-lg-2 bg-darker sidebar">
+            <div class="col-lg-2 bg-darker sidebar" id="sidebar">
                 <div class="sidebar-sticky pt-3">
                     <!-- Quick Actions -->
                     <div class="mb-4">
@@ -76,8 +142,9 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#filters" data-bs-toggle="collapse">
+                                <a class="nav-link filter-toggle" id="filterToggle">
                                     <i class="fas fa-filter me-2"></i>Advanced Filters
+                                    <i class="fas fa-chevron-down float-end mt-1" id="filterArrow"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -112,6 +179,12 @@
                             <button class="list-group-item list-group-item-action example-query" data-query="Suspicious network activity">
                                 <small><i class="fas fa-exclamation-triangle me-1"></i> Suspicious Activity</small>
                             </button>
+                            <button class="list-group-item list-group-item-action example-query" data-query="Security events from India">
+                                <small><i class="fas fa-flag me-1"></i> India Events</small>
+                            </button>
+                            <button class="list-group-item list-group-item-action example-query" data-query="High risk events from last 7 days">
+                                <small><i class="fas fa-skull me-1"></i> High Risk Events</small>
+                            </button>
                         </div>
                     </div>
 
@@ -127,7 +200,7 @@
             </div>
 
             <!-- Main Content -->
-            <div class="col-lg-10 main-content">
+            <div class="col-lg-10 main-content" id="mainContent">
                 <!-- Alert Banner -->
                 <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
                     <i class="fas fa-exclamation-triangle me-2"></i>
@@ -223,7 +296,7 @@
                             </div>
                             <div class="card-body p-0">
                                 <!-- Advanced Filters -->
-                                <div class="advanced-filters p-3 border-bottom border-secondary">
+                                <div class="advanced-filters p-3 border-bottom border-secondary" id="advancedFilters" style="display: none;">
                                     <div class="row g-2">
                                         <div class="col-md-3">
                                             <label class="form-label small text-muted">Time Range</label>
@@ -254,6 +327,8 @@
                                                 <option value="malware_detected">Malware</option>
                                                 <option value="brute_force_attempt">Brute Force</option>
                                                 <option value="port_scan">Port Scan</option>
+                                                <option value="firewall_block">Firewall Block</option>
+                                                <option value="data_exfiltration">Data Exfiltration</option>
                                             </select>
                                         </div>
                                         <div class="col-md-2">
@@ -296,6 +371,8 @@
                                                 <option value="DE">Germany</option>
                                                 <option value="CN">China</option>
                                                 <option value="RU">Russia</option>
+                                                <option value="FR">France</option>
+                                                <option value="JP">Japan</option>
                                             </select>
                                         </div>
                                     </div>

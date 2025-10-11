@@ -9,6 +9,7 @@ import random
 import pandas as pd
 from collections import Counter
 import numpy as np
+import os
 
 app = Flask(__name__)
 app.secret_key = 'siemspeak-production-secure-key-2024'
@@ -211,98 +212,144 @@ class SecurityDataGenerator:
             'firewall_block', 'privilege_escalation', 'data_exfiltration',
             'port_scan', 'brute_force_attempt', 'suspicious_connection'
         ]
-    
-    def generate_events(self, query_context: Dict, count: int = 1000) -> List[Dict]:
-        """Generate realistic security events based on query context"""
-        events = []
-        base_time = datetime.utcnow()
         
-        # Adjust distribution based on query intent
-        intent = query_context.get('intent', 'general_search')
-        entities = query_context.get('entities', {})
-        event_distribution = self._get_event_distribution(intent)
+        # Pre-generate consistent sample data
+        self.sample_data = self._generate_sample_data(10000)
+    
+    def _generate_sample_data(self, count: int) -> List[Dict]:
+        """Generate consistent sample data"""
+        events = []
+        base_time = datetime.utcnow() - timedelta(days=30)
+        
+        # Fixed distributions for consistent results
+        event_distributions = {
+            'failed_login': 0.25,
+            'successful_login': 0.35,
+            'malware_detected': 0.05,
+            'firewall_block': 0.10,
+            'privilege_escalation': 0.03,
+            'data_exfiltration': 0.02,
+            'port_scan': 0.08,
+            'brute_force_attempt': 0.07,
+            'suspicious_connection': 0.05
+        }
+        
+        country_weights = {
+            'IN': 0.35,  # Higher weight for India
+            'US': 0.15,
+            'UK': 0.08,
+            'DE': 0.07,
+            'CN': 0.06,
+            'RU': 0.05,
+            'FR': 0.04,
+            'JP': 0.04,
+            'BR': 0.03,
+            'AU': 0.03,
+            'CA': 0.03,
+            'KR': 0.02,
+            'SG': 0.02,
+            'AE': 0.01,
+            'PK': 0.01,
+            'BD': 0.01,
+            'LK': 0.01,
+            'NP': 0.01
+        }
+        
+        # Set random seed for consistent results
+        random.seed(42)
         
         for i in range(count):
-            event = self._generate_single_event(base_time, event_distribution, intent, entities)
+            # Choose event type based on distribution
+            event_type = random.choices(
+                list(event_distributions.keys()),
+                weights=list(event_distributions.values())
+            )[0]
+            
+            # Choose country based on weights
+            country = random.choices(
+                list(country_weights.keys()),
+                weights=list(country_weights.values())
+            )[0]
+            
+            # Generate timestamp with realistic distribution
+            days_ago = random.randint(0, 30)
+            hours_ago = random.randint(0, 23)
+            minutes_ago = random.randint(0, 59)
+            timestamp = base_time + timedelta(days=days_ago, hours=hours_ago, minutes=minutes_ago)
+            
+            # Generate IP based on country
+            if country == 'IN':
+                source_ip = f"103.{random.randint(100, 255)}.{random.randint(1, 255)}.{random.randint(1, 254)}"
+            else:
+                source_ip = f"{random.randint(1, 223)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 254)}"
+            
+            event = {
+                'id': f"evt_{i:06d}",
+                'timestamp': timestamp.isoformat() + 'Z',
+                'event_type': event_type,
+                'source_ip': source_ip,
+                'destination_ip': f"192.168.{random.randint(1, 255)}.{random.randint(1, 254)}",
+                'user': random.choice(self.users),
+                'severity': self._assign_severity(event_type),
+                'country': country,
+                'message': self._generate_message(event_type, country),
+                'risk_score': self._assign_risk_score(event_type),
+                'bytes_sent': random.randint(0, 1000000),
+                'bytes_received': random.randint(0, 500000)
+            }
             events.append(event)
         
         return events
     
-    def _get_event_distribution(self, intent: str) -> Dict[str, float]:
-        """Get event type distribution based on intent"""
-        distributions = {
-            'failed_logins': {'failed_login': 0.6, 'brute_force_attempt': 0.3, 'other': 0.1},
-            'successful_logins': {'successful_login': 0.8, 'other': 0.2},
-            'malware_detection': {'malware_detected': 0.7, 'suspicious_connection': 0.3},
-            'brute_force': {'brute_force_attempt': 0.5, 'failed_login': 0.4, 'other': 0.1},
-            'general_search': {et: 1/len(self.event_types) for et in self.event_types}
-        }
-        return distributions.get(intent, distributions['general_search'])
+    def get_sample_data(self):
+        """Return the pre-generated sample data"""
+        return self.sample_data
     
-    def _generate_single_event(self, base_time: datetime, distribution: Dict, intent: str, entities: Dict) -> Dict:
-        """Generate a single security event"""
-        event_type = self._weighted_choice(distribution)
+    def get_filtered_data(self, query_context: Dict) -> List[Dict]:
+        """Get filtered data based on query context"""
+        filtered_data = self.sample_data.copy()
         
-        # Adjust timestamp based on intent (create realistic patterns)
-        hours_ago = self._get_time_offset(intent)
-        timestamp = base_time - timedelta(hours=hours_ago)
+        # Apply time filter
+        time_range = query_context.get('time_range', {'unit': 'hours', 'value': 24})
+        filtered_data = self._filter_by_time(filtered_data, time_range)
         
-        # Generate realistic IP addresses with India focus
-        source_ip = self._generate_ip(entities.get('country'))
-        destination_ip = self._generate_ip()
+        # Apply other filters
+        if query_context.get('severity'):
+            filtered_data = [e for e in filtered_data if e['severity'] == query_context['severity']]
         
-        # Generate event data with India focus
-        event = {
-            'id': f"evt_{random.randint(100000, 999999)}",
-            'timestamp': timestamp.isoformat() + 'Z',
-            'event_type': event_type,
-            'source_ip': source_ip,
-            'destination_ip': destination_ip,
-            'user': random.choice(self.users),
-            'severity': self._assign_severity(event_type),
-            'country': self._assign_country(entities.get('country')),
-            'message': self._generate_message(event_type),
-            'risk_score': int(random.randint(1, 100)),
-            'bytes_sent': int(random.randint(0, 1000000)),
-            'bytes_received': int(random.randint(0, 1000000))
-        }
+        if query_context.get('country'):
+            filtered_data = [e for e in filtered_data if e['country'] == query_context['country']]
         
-        return event
+        if query_context.get('event_type'):
+            filtered_data = [e for e in filtered_data if e['event_type'] == query_context['event_type']]
+        
+        return filtered_data
     
-    def _weighted_choice(self, weights: Dict) -> str:
-        """Make weighted random choice"""
-        choices = list(weights.keys())
-        probabilities = list(weights.values())
-        return random.choices(choices, weights=probabilities, k=1)[0]
-    
-    def _get_time_offset(self, intent: str) -> int:
-        """Get time offset in hours based on intent"""
-        if intent == 'brute_force':
-            return random.randint(0, 24)
-        elif intent == 'failed_logins':
-            return random.randint(0, 168)
+    def _filter_by_time(self, events: List[Dict], time_range: Dict) -> List[Dict]:
+        """Filter events by time range"""
+        now = datetime.utcnow()
+        
+        if time_range['unit'] == 'hours':
+            cutoff = now - timedelta(hours=time_range['value'])
+        elif time_range['unit'] == 'days':
+            cutoff = now - timedelta(days=time_range['value'])
+        elif time_range['unit'] == 'weeks':
+            cutoff = now - timedelta(weeks=time_range['value'])
+        elif time_range['unit'] == 'today':
+            cutoff = now.replace(hour=0, minute=0, second=0, microsecond=0)
+        elif time_range['unit'] == 'yesterday':
+            cutoff = (now - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
+            now = cutoff + timedelta(days=1) - timedelta(seconds=1)
         else:
-            return random.randint(0, 720)
-    
-    def _generate_ip(self, country_filter: str = None) -> str:
-        """Generate realistic IP address with India focus"""
-        if country_filter == 'IN' or random.random() < 0.6:  # 60% Indian IPs
-            # Indian IP ranges
-            return f"103.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 254)}"
-        elif random.random() < 0.7:  # Internal IPs
-            return f"10.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 254)}"
-        else:  # External IPs
-            return f"{random.randint(1, 223)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 254)}"
-    
-    def _assign_country(self, country_filter: str = None) -> str:
-        """Assign country with India focus"""
-        if country_filter:
-            return country_filter
-        # Weighted towards India
-        if random.random() < 0.4:  # 40% chance for India
-            return 'IN'
-        else:
-            return random.choice([c for c in self.countries if c != 'IN'])
+            cutoff = now - timedelta(hours=24)
+        
+        filtered_events = []
+        for e in events:
+            event_time = datetime.fromisoformat(e['timestamp'].replace('Z', ''))
+            if cutoff <= event_time <= now:
+                filtered_events.append(e)
+        
+        return filtered_events
     
     def _assign_severity(self, event_type: str) -> str:
         """Assign severity based on event type"""
@@ -319,24 +366,51 @@ class SecurityDataGenerator:
         }
         return severity_map.get(event_type, 'low')
     
-    def _generate_message(self, event_type: str) -> str:
+    def _assign_risk_score(self, event_type: str) -> int:
+        """Assign risk score based on event type"""
+        risk_map = {
+            'failed_login': random.randint(40, 70),
+            'successful_login': random.randint(1, 30),
+            'malware_detected': random.randint(85, 100),
+            'firewall_block': random.randint(60, 85),
+            'privilege_escalation': random.randint(75, 95),
+            'data_exfiltration': random.randint(90, 100),
+            'port_scan': random.randint(50, 75),
+            'brute_force_attempt': random.randint(70, 90),
+            'suspicious_connection': random.randint(55, 80)
+        }
+        return risk_map.get(event_type, random.randint(1, 100))
+    
+    def _generate_message(self, event_type: str, country: str) -> str:
         """Generate realistic event message"""
         messages = {
-            'failed_login': 'Failed authentication attempt for user {user} from {ip}',
-            'successful_login': 'Successful login for user {user} from {ip}',
-            'malware_detected': 'Potential malware activity detected from {ip}',
-            'firewall_block': 'Firewall blocked connection attempt from {ip}',
-            'privilege_escalation': 'Privilege escalation attempt detected for user {user}',
-            'data_exfiltration': 'Large data transfer detected from {ip}',
-            'port_scan': 'Port scanning activity detected from {ip}',
-            'brute_force_attempt': 'Multiple failed login attempts from {ip}',
-            'suspicious_connection': 'Suspicious network connection from {ip}'
+            'failed_login': f'Failed authentication attempt for user {{user}} from {{ip}} ({{country}})',
+            'successful_login': f'Successful login for user {{user}} from {{ip}} ({{country}})',
+            'malware_detected': f'Potential malware activity detected from {{ip}} ({{country}})',
+            'firewall_block': f'Firewall blocked connection attempt from {{ip}} ({{country}})',
+            'privilege_escalation': f'Privilege escalation attempt detected for user {{user}} from {{country}}',
+            'data_exfiltration': f'Large data transfer detected from {{ip}} ({{country}})',
+            'port_scan': f'Port scanning activity detected from {{ip}} ({{country}})',
+            'brute_force_attempt': f'Multiple failed login attempts from {{ip}} ({{country}})',
+            'suspicious_connection': f'Suspicious network connection from {{ip}} ({{country}})'
         }
-        base_msg = messages.get(event_type, 'Security event detected')
+        base_msg = messages.get(event_type, 'Security event detected from {country}')
         return base_msg.format(
             user=random.choice(self.users),
-            ip=self._generate_ip()
+            ip=self._generate_ip_for_country(country),
+            country=country
         )
+    
+    def _generate_ip_for_country(self, country: str) -> str:
+        """Generate IP address based on country"""
+        if country == 'IN':
+            return f"103.{random.randint(100, 255)}.{random.randint(1, 255)}.{random.randint(1, 254)}"
+        elif country == 'US':
+            return f"198.{random.randint(1, 255)}.{random.randint(1, 255)}.{random.randint(1, 254)}"
+        elif country == 'CN':
+            return f"203.{random.randint(1, 255)}.{random.randint(1, 255)}.{random.randint(1, 254)}"
+        else:
+            return f"{random.randint(1, 223)}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(1, 254)}"
 
 class AnalyticsEngine:
     """Advanced analytics and insights generation"""
@@ -346,15 +420,9 @@ class AnalyticsEngine:
     
     def process_query(self, parsed_query: Dict) -> Dict[str, Any]:
         """Process parsed query and generate comprehensive results"""
-        # Generate realistic data based on query
-        events = self.data_generator.generate_events(parsed_query, 1000)
-        
-        # Apply time filter
-        time_range = parsed_query['entities']['time_range']
-        filtered_events = self._filter_by_time(events, time_range)
-        
-        # Apply other filters
-        filtered_events = self._apply_filters(filtered_events, parsed_query['entities'])
+        # Get filtered data based on query
+        entities = parsed_query['entities']
+        filtered_events = self.data_generator.get_filtered_data(entities)
         
         # Generate analysis
         analysis = self._analyze_events(filtered_events, parsed_query)
@@ -372,9 +440,9 @@ class AnalyticsEngine:
             'insights': self._convert_to_serializable(insights),
             'chart_data': self._convert_to_serializable(chart_data),
             'analysis': self._convert_to_serializable(analysis),
-            'table_data': filtered_events[:50],  # Sample for display
+            'table_data': filtered_events[:100],  # Sample for display
             'total_events': len(filtered_events),
-            'sampled_events': min(50, len(filtered_events)),
+            'sampled_events': min(100, len(filtered_events)),
             'processing_time': f"{random.uniform(0.1, 0.5):.2f}s",
             'data_source': 'SIEM Database + Threat Intelligence'
         }
@@ -399,38 +467,6 @@ class AnalyticsEngine:
             return obj.isoformat()
         else:
             return obj
-    
-    def _filter_by_time(self, events: List[Dict], time_range: Dict) -> List[Dict]:
-        """Filter events by time range"""
-        now = datetime.utcnow()
-        
-        if time_range['unit'] == 'hours':
-            cutoff = now - timedelta(hours=time_range['value'])
-        elif time_range['unit'] == 'days':
-            cutoff = now - timedelta(days=time_range['value'])
-        elif time_range['unit'] == 'weeks':
-            cutoff = now - timedelta(weeks=time_range['value'])
-        elif time_range['unit'] == 'today':
-            cutoff = now.replace(hour=0, minute=0, second=0, microsecond=0)
-        elif time_range['unit'] == 'yesterday':
-            cutoff = (now - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
-            now = cutoff + timedelta(days=1) - timedelta(seconds=1)
-        else:
-            cutoff = now - timedelta(hours=24)
-        
-        return [e for e in events if cutoff <= datetime.fromisoformat(e['timestamp'].replace('Z', '')) <= now]
-    
-    def _apply_filters(self, events: List[Dict], entities: Dict) -> List[Dict]:
-        """Apply additional filters"""
-        filtered = events
-        
-        if entities.get('severity'):
-            filtered = [e for e in filtered if e['severity'] == entities['severity']]
-        
-        if entities.get('country'):
-            filtered = [e for e in filtered if e['country'] == entities['country']]
-        
-        return filtered
     
     def _analyze_events(self, events: List[Dict], parsed_query: Dict) -> Dict[str, Any]:
         """Comprehensive event analysis"""
@@ -495,6 +531,8 @@ class AnalyticsEngine:
             analysis['failed_login_analysis'] = self._analyze_failed_logins(df)
         elif parsed_query['intent'] == 'brute_force':
             analysis['brute_force_analysis'] = self._analyze_brute_force(df)
+        elif parsed_query['intent'] == 'geographic_analysis':
+            analysis['geographic_analysis'] = self._analyze_geographic(df)
         
         return analysis
     
@@ -538,6 +576,15 @@ class AnalyticsEngine:
             'suspicious_ips_count': int(len(suspicious_ips)),
             'total_attempts': int(failed_logins.shape[0]),
             'suspicious_ips': {str(k): int(v) for k, v in suspicious_ips.to_dict().items()}
+        }
+    
+    def _analyze_geographic(self, df: pd.DataFrame) -> Dict:
+        """Analyze geographic patterns"""
+        return {
+            'total_countries': int(df['country'].nunique()),
+            'top_country': df['country'].value_counts().index[0] if len(df) > 0 else '',
+            'top_country_count': int(df['country'].value_counts().iloc[0]) if len(df) > 0 else 0,
+            'india_events': int(df[df['country'] == 'IN'].shape[0]) if 'IN' in df['country'].values else 0
         }
     
     def _generate_insights(self, analysis: Dict, parsed_query: Dict) -> List[Dict]:
@@ -586,11 +633,12 @@ class AnalyticsEngine:
                 })
         
         # Geographic insights for India
-        if analysis.get('countries', {}).get('IN', 0) > 100:
+        geo_analysis = analysis.get('geographic_analysis', {})
+        if geo_analysis.get('india_events', 0) > 100:
             insights.append({
                 'type': 'info',
                 'title': 'High Activity from India',
-                'message': f"Significant security events ({analysis['countries']['IN']}) originating from India.",
+                'message': f"Significant security events ({geo_analysis['india_events']}) originating from India.",
                 'recommendation': 'Monitor Indian IP ranges for suspicious patterns.'
             })
         
@@ -606,11 +654,21 @@ class AnalyticsEngine:
         intent = parsed_query['intent']
         time_range = parsed_query['entities']['time_range']
         
-        time_phrase = f"in the last {time_range['value']} {time_range['unit']}"
+        # Fix time phrase formatting
+        if time_range['unit'] == 'yesterday':
+            time_phrase = "yesterday"
+        else:
+            time_phrase = f"in the last {time_range['value']} {time_range['unit']}"
         
         if intent == 'failed_logins':
             failed_analysis = analysis.get('failed_login_analysis', {})
-            return f"Found {failed_analysis.get('total_failed', 0)} failed login attempts {time_phrase} across {failed_analysis.get('unique_users', 0)} unique users. Peak activity occurred around {failed_analysis.get('peak_hour', 'unknown time')}."
+            peak_hour = failed_analysis.get('peak_hour', '')
+            if peak_hour:
+                peak_time = datetime.fromisoformat(peak_hour.replace('Z', '')).strftime('%I:%M %p')
+            else:
+                peak_time = 'unknown time'
+                
+            return f"Found {failed_analysis.get('total_failed', 0)} failed login attempts {time_phrase} across {failed_analysis.get('unique_users', 0)} unique users. Peak activity occurred around {peak_time}."
         
         elif intent == 'successful_logins':
             successful_logins = analysis.get('event_types', {}).get('successful_login', 0)
@@ -725,21 +783,12 @@ def search_events():
         data = request.json
         filters = data.get('filters', {})
         
-        # Generate sample data based on filters
-        events = analytics_engine.data_generator.generate_events({'intent': 'general_search', 'entities': filters}, 200)
-        
-        # Apply time filter
-        if 'time_range' in filters:
-            filtered_events = analytics_engine._filter_by_time(events, filters['time_range'])
-        else:
-            filtered_events = events
-        
-        # Apply other filters
-        filtered_events = analytics_engine._apply_filters(filtered_events, filters)
+        # Get filtered data based on filters
+        filtered_events = analytics_engine.data_generator.get_filtered_data(filters)
         
         return jsonify({
             'success': True,
-            'events': filtered_events[:50],
+            'events': filtered_events[:100],
             'total_count': len(filtered_events),
             'filters': filters
         })

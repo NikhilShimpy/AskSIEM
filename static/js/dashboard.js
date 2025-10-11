@@ -7,6 +7,8 @@ class SIEMSpeakDashboard {
         this.currentCharts = [];
         this.conversationHistory = [];
         this.currentFilters = {};
+        this.isSidebarCollapsed = false;
+        this.areFiltersVisible = false;
     }
 
     init() {
@@ -82,10 +84,43 @@ class SIEMSpeakDashboard {
             if (e.target.closest('#exportResults')) {
                 this.exportCurrentResults();
             }
+
+            // Export filtered results
+            if (e.target.closest('.export-filtered')) {
+                const button = e.target.closest('.export-filtered');
+                const events = JSON.parse(button.getAttribute('data-events'));
+                this.exportResultsAsCSV(events);
+            }
+
+            // View all events
+            if (e.target.closest('#viewAllEvents')) {
+                this.showAllEvents();
+            }
+
+            // Export all charts
+            if (e.target.closest('.export-all-charts')) {
+                this.exportAllCharts();
+            }
         });
     }
 
     bindDashboardEvents() {
+        // Sidebar toggle
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', () => {
+                this.toggleSidebar();
+            });
+        }
+
+        // Filter toggle
+        const filterToggle = document.getElementById('filterToggle');
+        if (filterToggle) {
+            filterToggle.addEventListener('click', () => {
+                this.toggleFilters();
+            });
+        }
+
         // Chat form submission
         const chatForm = document.getElementById('chatForm');
         if (chatForm) {
@@ -149,6 +184,61 @@ class SIEMSpeakDashboard {
                 }, 500));
             }
         });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                this.toggleTheme();
+            });
+        }
+    }
+
+    toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        
+        if (sidebar && mainContent) {
+            this.isSidebarCollapsed = !this.isSidebarCollapsed;
+            
+            if (this.isSidebarCollapsed) {
+                sidebar.classList.add('collapsed');
+                mainContent.classList.add('expanded');
+            } else {
+                sidebar.classList.remove('collapsed');
+                mainContent.classList.remove('expanded');
+            }
+        }
+    }
+
+    toggleFilters() {
+        const filters = document.getElementById('advancedFilters');
+        const filterArrow = document.getElementById('filterArrow');
+        
+        if (filters && filterArrow) {
+            this.areFiltersVisible = !this.areFiltersVisible;
+            
+            if (this.areFiltersVisible) {
+                filters.style.display = 'block';
+                filterArrow.className = 'fas fa-chevron-up float-end mt-1';
+            } else {
+                filters.style.display = 'none';
+                filterArrow.className = 'fas fa-chevron-down float-end mt-1';
+            }
+        }
+    }
+
+    toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-bs-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-bs-theme', newTheme);
+        
+        // Update icon
+        const themeIcon = document.querySelector('#themeToggle i');
+        if (themeIcon) {
+            themeIcon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+        }
     }
 
     debounce(func, wait) {
@@ -243,7 +333,7 @@ class SIEMSpeakDashboard {
             const element = document.getElementById(id);
             if (element) {
                 if (element.tagName === 'SELECT') {
-                    element.selectedIndex = 0;
+                    element.selectedIndex = id === 'timeFilter' ? 1 : 0; // Keep 24h as default
                 } else {
                     element.value = '';
                 }
@@ -494,19 +584,17 @@ class SIEMSpeakDashboard {
                     <div class="row g-2">
                         ${results.insights.map(insight => `
                             <div class="col-md-6">
-                                <div class="card bg-darker border-${insight.type} mb-2">
-                                    <div class="card-body py-2">
-                                        <div class="d-flex align-items-start">
-                                            <i class="fas fa-${this.getInsightIcon(insight.type)} me-2 mt-1 text-${insight.type}"></i>
-                                            <div class="flex-grow-1">
-                                                <strong class="d-block text-${insight.type}">${insight.title}</strong>
-                                                <small class="text-muted">${insight.message}</small>
-                                                ${insight.recommendation ? `
-                                                    <div class="mt-1">
-                                                        <small><strong>Recommendation:</strong> ${insight.recommendation}</small>
-                                                    </div>
-                                                ` : ''}
-                                            </div>
+                                <div class="insight-card ${insight.type} p-2 mb-2">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-${this.getInsightIcon(insight.type)} me-2 mt-1 text-${insight.type}"></i>
+                                        <div class="flex-grow-1">
+                                            <strong class="d-block text-${insight.type}">${insight.title}</strong>
+                                            <small class="text-muted">${insight.message}</small>
+                                            ${insight.recommendation ? `
+                                                <div class="mt-1">
+                                                    <small><strong>Recommendation:</strong> ${insight.recommendation}</small>
+                                                </div>
+                                            ` : ''}
                                         </div>
                                     </div>
                                 </div>
@@ -1292,6 +1380,14 @@ class SIEMSpeakDashboard {
         }
     }
 
+    exportAllCharts() {
+        this.currentCharts.forEach((chart, index) => {
+            setTimeout(() => {
+                this.exportChart(chart.canvas.id);
+            }, index * 100);
+        });
+    }
+
     toggleFullscreenChart(chartId) {
         const chartWrapper = document.querySelector(`[data-chart-id="${chartId}"]`)?.closest('.chart-wrapper');
         if (chartWrapper) {
@@ -1310,6 +1406,12 @@ class SIEMSpeakDashboard {
                     chart.resize();
                 }, 100);
             }
+        }
+    }
+
+    showAllEvents() {
+        if (this.currentResults && this.currentResults.results.table_data) {
+            this.showFullResults(this.currentResults.results);
         }
     }
 
