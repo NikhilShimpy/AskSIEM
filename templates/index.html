@@ -1,111 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIEMSpeak - Conversational SIEM Assistant</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/loading.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <!-- Sidebar -->
-            <div class="col-md-3 bg-light border-end sidebar">
-                <div class="sidebar-sticky pt-3">
-                    <h4 class="text-center mb-4">
-                        <i class="fas fa-shield-alt text-primary"></i>
-                        SIEMSpeak
-                    </h4>
-                    
-                    <div class="mb-4">
-                        <h6>Quick Examples:</h6>
-                        <div class="list-group">
-                            <button class="list-group-item list-group-item-action example-question" data-question="Show failed logins from yesterday">
-                                <small>Failed logins yesterday</small>
-                            </button>
-                            <button class="list-group-item list-group-item-action example-question" data-question="Show me VPN connections in the last 24 hours">
-                                <small>VPN connections last 24h</small>
-                            </button>
-                            <button class="list-group-item list-group-item-action example-question" data-question="What suspicious activity occurred today">
-                                <small>Suspicious activity today</small>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mt-auto">
-                        <button class="btn btn-outline-danger btn-sm w-100" id="clearChat">
-                            <i class="fas fa-trash"></i> Clear Chat
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Chat Area -->
-            <div class="col-md-9 d-flex flex-column main-content">
-                <!-- Header -->
-                <div class="border-bottom py-3 px-4 bg-white">
-                    <h5 class="mb-0">SIEM Assistant</h5>
-                    <small class="text-muted">Ask natural language questions about your security data</small>
-                </div>
-
-                <!-- Chat Messages -->
-                <div class="flex-grow-1 p-4 chat-messages" id="chatMessages">
-                    <div class="welcome-message text-center text-muted">
-                        <i class="fas fa-robot fa-3x mb-3"></i>
-                        <h5>Welcome to SIEMSpeak</h5>
-                        <p>Ask me questions about your security data in plain English</p>
-                    </div>
-                </div>
-
-                <!-- Loading Indicator -->
-                <div class="loading-indicator" id="loadingIndicator" style="display: none;">
-                    <div class="loading-dots">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <span class="loading-text">Processing your query...</span>
-                </div>
-
-                <!-- Input Area -->
-                <div class="border-top p-3 bg-light">
-                    <form id="chatForm">
-                        <div class="input-group">
-                            <input type="text" 
-                                   class="form-control" 
-                                   id="questionInput" 
-                                   placeholder="Ask about failed logins, VPN activity, suspicious events..." 
-                                   autocomplete="off">
-                            <button class="btn btn-primary" type="submit">
-                                <i class="fas fa-paper-plane"></i> Send
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Results Modal -->
-    <div class="modal fade" id="resultsModal" tabindex="-1">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Query Results</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body" id="modalBody">
-                    <!-- Dynamic content will be inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>SIEMSpeak - AI-Powered Security Analytics</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-shield-alt me-2"></i>
+                SIEMSpeak Enterprise
+            </a>
+            
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/dashboard">
+                    <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-primary text-white py-5 mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        AI-Powered Security Analytics
+                    </h1>
+                    <p class="lead mb-4">
+                        Transform your security operations with natural language queries. 
+                        Get instant insights from your SIEM data without complex query languages.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="/dashboard" class="btn btn-light btn-lg px-4 py-2">
+                            <i class="fas fa-rocket me-2"></i>Launch Dashboard
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-4 py-2">
+                            <i class="fas fa-play-circle me-2"></i>View Demo
+                        </a>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="row mt-5 pt-4">
+                        <div class="col-6 col-md-3 text-center mb-3">
+                            <h3 class="fw-bold text-warning">10K+</h3>
+                            <small class="text-light">Events Analyzed</small>
+                        </div>
+                        <div class="col-6 col-md-3 text-center mb-3">
+                            <h3 class="fw-bold text-success">98%</h3>
+                            <small class="text-light">Query Accuracy</small>
+                        </div>
+                        <div class="col-6 col-md-3 text-center mb-3">
+                            <h3 class="fw-bold text-info">0.3s</h3>
+                            <small class="text-light">Avg Response</small>
+                        </div>
+                        <div class="col-6 col-md-3 text-center mb-3">
+                            <h3 class="fw-bold text-danger">247</h3>
+                            <small class="text-light">Threats Detected</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <!-- Interactive Demo -->
+                    <div class="demo-card bg-dark rounded-4 p-4 shadow-lg border border-light">
+                        <div class="demo-header mb-4">
+                            <h5 class="text-center mb-3">
+                                <i class="fas fa-robot text-primary me-2"></i>
+                                Try SIEM Assistant
+                            </h5>
+                        </div>
+                        
+                        <div class="demo-chat bg-darker rounded-3 p-3 mb-3">
+                            <div class="message user-message bg-primary text-white rounded-3 p-3 mb-2">
+                                <strong>You:</strong> Show failed logins in the last 24 hours
+                            </div>
+                            <div class="message bot-message bg-secondary text-light rounded-3 p-3">
+                                <strong>AI Assistant:</strong> Found 347 failed login attempts from 42 unique IPs. Peak activity at 09:00 UTC. Top user: admin (23 attempts).
+                            </div>
+                        </div>
+                        
+                        <div class="demo-actions">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <button class="btn btn-outline-light w-100 example-btn" data-query="Top users with most alerts">
+                                        <small>Top Users</small>
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-outline-light w-100 example-btn" data-query="Malware detection events">
+                                        <small>Malware Events</small>
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-outline-light w-100 example-btn" data-query="Brute force attempts yesterday">
+                                        <small>Brute Force</small>
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-outline-light w-100 example-btn" data-query="Successful logins by country">
+                                        <small>Geo Analysis</small>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-darker">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3 text-light">Enterprise-Grade Features</h2>
+                <p class="lead text-muted">Powered by advanced AI and real-time analytics</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card bg-dark rounded-3 p-4 h-100 border border-secondary">
+                        <div class="feature-icon text-primary mb-3">
+                            <i class="fas fa-comment-dots fa-2x"></i>
+                        </div>
+                        <h4 class="text-light">Natural Language Queries</h4>
+                        <p class="text-muted">Ask questions in plain English. No complex query languages required.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card bg-dark rounded-3 p-4 h-100 border border-secondary">
+                        <div class="feature-icon text-success mb-3">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h4 class="text-light">Advanced Analytics</h4>
+                        <p class="text-muted">Interactive charts, timelines, and comprehensive data visualizations.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card bg-dark rounded-3 p-4 h-100 border border-secondary">
+                        <div class="feature-icon text-warning mb-3">
+                            <i class="fas fa-bolt fa-2x"></i>
+                        </div>
+                        <h4 class="text-light">Real-time Processing</h4>
+                        <p class="text-muted">Instant insights with sub-second response times for critical queries.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card bg-dark rounded-3 p-4 h-100 border border-secondary">
+                        <div class="feature-icon text-info mb-3">
+                            <i class="fas fa-filter fa-2x"></i>
+                        </div>
+                        <h4 class="text-light">Smart Filtering</h4>
+                        <p class="text-muted">Advanced filtering by time, severity, IP ranges, and custom criteria.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card bg-dark rounded-3 p-4 h-100 border border-secondary">
+                        <div class="feature-icon text-danger mb-3">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h4 class="text-light">Threat Intelligence</h4>
+                        <p class="text-muted">Integrated threat detection with automatic pattern recognition.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card bg-dark rounded-3 p-4 h-100 border border-secondary">
+                        <div class="feature-icon text-purple mb-3">
+                            <i class="fas fa-file-export fa-2x"></i>
+                        </div>
+                        <h4 class="text-light">Comprehensive Reporting</h4>
+                        <p class="text-muted">Generate detailed reports with charts and actionable insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-gradient-primary text-white">
+        <div class="container text-center py-5">
+            <h2 class="fw-bold mb-4">Ready to Transform Your Security Operations?</h2>
+            <p class="lead mb-4">Join security teams using SIEMSpeak to accelerate investigations and improve threat detection.</p>
+            <a href="/dashboard" class="btn btn-light btn-lg px-5 py-3">
+                <i class="fas fa-play me-2"></i>Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-4 border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 SIEMSpeak Enterprise. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex gap-3 justify-content-md-end justify-content-start mt-2 mt-md-0">
+                        <a href="#" class="text-muted"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Demo animation and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate demo messages
+            const messages = document.querySelectorAll('.demo-chat .message');
+            let delay = 0;
+            
+            messages.forEach((message, index) => {
+                setTimeout(() => {
+                    message.style.opacity = '1';
+                    message.style.transform = 'translateY(0)';
+                }, delay);
+                delay += 1000;
+            });
+
+            // Example button interactions
+            document.querySelectorAll('.example-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const query = this.getAttribute('data-query');
+                    window.location.href = `/dashboard?query=${encodeURIComponent(query)}`;
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

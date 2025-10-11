@@ -1,0 +1,64 @@
+<!-- Sidebar Component -->
+<div class="col-lg-2 bg-darker sidebar">
+    <div class="sidebar-sticky pt-3">
+        <!-- Quick Actions -->
+        <div class="mb-4">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-2 text-muted">
+                <span>Quick Actions</span>
+            </h6>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="fas fa-search me-2"></i>Query Assistant
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#filters" data-bs-toggle="collapse">
+                        <i class="fas fa-filter me-2"></i>Advanced Filters
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reports">
+                        <i class="fas fa-chart-bar me-2"></i>Reports
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Example Queries -->
+        <div class="mb-4">
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mb-2 text-muted">
+                <span>Example Queries</span>
+            </h6>
+            <div class="list-group list-group-flush">
+                <button class="list-group-item list-group-item-action example-query" data-query="Show failed logins in the last 24 hours">
+                    <small><i class="fas fa-sign-in-alt me-1"></i> Failed Logins (24h)</small>
+                </button>
+                <button class="list-group-item list-group-item-action example-query" data-query="Top 10 users with most activity">
+                    <small><i class="fas fa-users me-1"></i> Top Active Users</small>
+                </button>
+                <button class="list-group-item list-group-item-action example-query" data-query="Malware detection events this week">
+                    <small><i class="fas fa-virus me-1"></i> Malware Events</small>
+                </button>
+                <button class="list-group-item list-group-item-action example-query" data-query="Brute force attempts yesterday">
+                    <small><i class="fas fa-hammer me-1"></i> Brute Force</small>
+                </button>
+                <button class="list-group-item list-group-item-action example-query" data-query="Display successful logins by country">
+                    <small><i class="fas fa-globe me-1"></i> Geo Analysis</small>
+                </button>
+                <button class="list-group-item list-group-item-action example-query" data-query="Suspicious network activity">
+                    <small><i class="fas fa-exclamation-triangle me-1"></i> Suspicious Activity</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- System Info -->
+        <div class="mt-auto p-3">
+            <div class="system-info">
+                <small class="text-muted d-block"><i class="fas fa-database me-1"></i> Data Sources: 3 connected</small>
+                <small class="text-muted d-block"><i class="fas fa-sync me-1"></i> Last sync: 2 minutes ago</small>
+                <small class="text-muted d-block"><i class="fas fa-hdd me-1"></i> Storage: 45.2 GB used</small>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+{
+  "training_queries": [
+    {
+      "query": "Show failed logins in the last 24 hours",
+      "intent": "failed_logins",
+      "entities": {
+        "time_range": {"unit": "hours", "value": 24},
+        "event_type": "failed_login"
+      }
+    },
+    {
+      "query": "Display successful logins by country",
+      "intent": "geographic_analysis", 
+      "entities": {
+        "event_type": "successful_login"
+      }
+    },
+    {
+      "query": "Top 10 users with most activity",
+      "intent": "top_users",
+      "entities": {
+        "top_n": 10
+      }
+    },
+    {
+      "query": "Malware detection events this week",
+      "intent": "malware_detection",
+      "entities": {
+        "time_range": {"unit": "weeks", "value": 1},
+        "event_type": "malware_detected"
+      }
+    },
+    {
+      "query": "Brute force attempts yesterday", 
+      "intent": "brute_force",
+      "entities": {
+        "time_range": {"unit": "days", "value": 1},
+        "event_type": "brute_force_attempt"
+      }
+    },
+    {
+      "query": "Suspicious network activity",
+      "intent": "suspicious_activity",
+      "entities": {
+        "severity": "high"
+      }
+    },
+    {
+      "query": "Firewall blocks by severity",
+      "intent": "general_search", 
+      "entities": {
+        "event_type": "firewall_block"
+      }
+    },
+    {
+      "query": "User login timeline for past week",
+      "intent": "time_analysis",
+      "entities": {
+        "time_range": {"unit": "weeks", "value": 1},
+        "event_type": "successful_login"
+      }
+    },
+    {
+      "query": "Show critical severity events",
+      "intent": "general_search",
+      "entities": {
+        "severity": "critical"
+      }
+    },
+    {
+      "query": "Port scanning activity from external IPs",
+      "intent": "suspicious_activity",
+      "entities": {
+        "event_type": "port_scan"
+      }
+    }
+  ]
+}

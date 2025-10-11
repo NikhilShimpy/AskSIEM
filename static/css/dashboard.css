@@ -1,0 +1,408 @@
+/* Dashboard Specific Styles */
+
+/* Main Content Area */
+.main-content {
+    padding: 1rem;
+    background-color: var(--bg-color);
+    min-height: calc(100vh - 56px);
+}
+
+/* Overview Cards */
+.overview-card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255,255,255,0.2);
+}
+
+.overview-card .card-body {
+    position: relative;
+    z-index: 1;
+}
+
+.overview-card i {
+    transition: transform 0.3s ease;
+}
+
+.overview-card:hover i {
+    transform: scale(1.1);
+}
+
+/* Advanced Filters */
+.advanced-filters {
+    background-color: var(--darker-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.advanced-filters .form-label {
+    font-weight: 500;
+}
+
+/* Chat Interface */
+.chat-messages {
+    min-height: 300px;
+    background-color: var(--bg-color);
+}
+
+.welcome-message {
+    opacity: 0.7;
+}
+
+.welcome-message i {
+    font-size: 4rem;
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 2rem;
+}
+
+.result-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.result-header {
+    background-color: var(--darker-color);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-body {
+    padding: 1.5rem;
+}
+
+/* Summary Section */
+.summary-section {
+    background: linear-gradient(135deg, rgba(77, 201, 246, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Insights Grid */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.insight-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.insight-card.warning {
+    border-left: 4px solid var(--warning-color);
+}
+
+.insight-card.danger {
+    border-left: 4px solid var(--danger-color);
+}
+
+.insight-card.info {
+    border-left: 4px solid var(--info-color);
+}
+
+.insight-card.success {
+    border-left: 4px solid var(--success-color);
+}
+
+/* Charts Container */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.chart-wrapper {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.chart-wrapper:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.chart-title {
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.chart-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* Table Styles */
+.events-table {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.events-table .table {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.events-table .table th {
+    background-color: var(--darker-color);
+    border-color: var(--border-color);
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.events-table .table td {
+    border-color: var(--border-color);
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+}
+
+.events-table .table tbody tr:hover {
+    background-color: rgba(77, 201, 246, 0.05);
+}
+
+/* Badge Variants */
+.badge-risk-high {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.badge-risk-medium {
+    background-color: var(--warning-color);
+    color: black;
+}
+
+.badge-risk-low {
+    background-color: var(--success-color);
+    color: white;
+}
+
+/* Progress Bars */
+.progress {
+    background-color: var(--darker-color);
+    border-radius: 10px;
+    height: 8px;
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-action {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    transform: translateY(-1px);
+}
+
+/* Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Loading States */
+.skeleton-loader {
+    background: linear-gradient(90deg, var(--darker-color) 25%, var(--border-color) 50%, var(--darker-color) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-card .card-body {
+        padding: 1rem;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .chart-wrapper {
+        padding: 1rem;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+    
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons .btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Dark/Light Theme Adjustments */
+[data-bs-theme="light"] .advanced-filters {
+    background-color: #f8f9fa;
+}
+
+[data-bs-theme="light"] .result-header {
+    background-color: #e9ecef;
+}
+
+[data-bs-theme="light"] .events-table .table th {
+    background-color: #e9ecef;
+}
+
+/* Custom Scrollbar for Chat */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Animation for New Messages */
+@keyframes slideInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.message.new-message {
+    animation: slideInMessage 0.3s ease;
+}
+
+/* Status Indicators */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-online {
+    background-color: var(--success-color);
+}
+
+.status-warning {
+    background-color: var(--warning-color);
+}
+
+.status-offline {
+    background-color: var(--danger-color);
+}
+
+/* Tooltip Customization */
+.tooltip {
+    --bs-tooltip-bg: var(--darker-color);
+    --bs-tooltip-color: var(--text-color);
+}
+
+/* Print Styles */
+@media print {
+    .sidebar, .navbar, .advanced-filters, .chat-input {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .card {
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+}

@@ -1,0 +1,71 @@
+<!-- Charts Component -->
+<div class="charts-container" id="chartsContainer">
+    <!-- Charts will be dynamically inserted here -->
+</div>
+
+<!-- Chart Templates -->
+<template id="timelineChartTemplate">
+    <div class="chart-wrapper" data-chart-type="timeline">
+        <div class="chart-header">
+            <h6 class="chart-title">Events Timeline</h6>
+            <div class="chart-controls">
+                <button class="btn btn-sm btn-outline-secondary chart-export">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary chart-fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chart-container-md">
+            <canvas></canvas>
+        </div>
+        <div class="chart-footer">
+            <small class="chart-stats"></small>
+        </div>
+    </div>
+</template>
+
+<template id="pieChartTemplate">
+    <div class="chart-wrapper" data-chart-type="event_types">
+        <div class="chart-header">
+            <h6 class="chart-title">Event Type Distribution</h6>
+            <div class="chart-controls">
+                <button class="btn btn-sm btn-outline-secondary chart-export">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary chart-fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chart-container-md">
+            <canvas></canvas>
+        </div>
+        <div class="chart-footer">
+            <small class="chart-stats"></small>
+        </div>
+    </div>
+</template>
+
+<template id="barChartTemplate">
+    <div class="chart-wrapper" data-chart-type="top_users">
+        <div class="chart-header">
+            <h6 class="chart-title">Top Users by Activity</h6>
+            <div class="chart-controls">
+                <button class="btn btn-sm btn-outline-secondary chart-export">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-secondary chart-fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chart-container-md">
+            <canvas></canvas>
+        </div>
+        <div class="chart-footer">
+            <small class="chart-stats"></small>
+        </div>
+    </div>
+</template>
