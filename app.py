@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify, session
 import json
-import logging
 from datetime import datetime, timedelta
 import sqlite3
 from typing import Dict, List, Any, Tuple
@@ -10,23 +9,23 @@ import pandas as pd
 from collections import Counter
 import numpy as np
 import os
+import sys
+import logging
 
 app = Flask(__name__)
 app.secret_key = 'siemspeak-production-secure-key-2024'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=24)
 
-# Configure logging
+# Configure logging for Vercel (console only)
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('siemspeak.log'),
-        logging.StreamHandler()
-    ]
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
 )
 
 logger = logging.getLogger(__name__)
+
 
 class JSONEncoder(json.JSONEncoder):
     """Custom JSON encoder to handle numpy types and other non-serializable objects"""
@@ -844,6 +843,6 @@ def system_status():
         'last_updated': datetime.utcnow().isoformat()
     })
 
+
 if __name__ == '__main__':
-    #  app.run(debug=True)
     app.run(debug=True, host='0.0.0.0', port=5000)

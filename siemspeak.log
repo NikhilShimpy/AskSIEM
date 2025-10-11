@@ -1001,3 +1001,1271 @@ TypeError: Object of type int64 is not JSON serializable
 2025-10-11 20:15:30,098 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
 2025-10-11 20:15:30,939 - werkzeug - WARNING -  * Debugger is active!
 2025-10-11 20:15:30,944 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 20:31:06,238 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 20:31:06,241 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 20:31:06,769 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 20:31:07,610 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 20:31:07,615 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 20:31:13,575 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 20:31:13,575 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 20:31:13,576 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 20:31:13,827 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 20:31:14,913 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 20:31:14,917 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:16:29,010 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:16:30,648 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:16:32,282 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:16:32,297 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:16:34,002 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.42:5000
+2025-10-11 23:16:34,003 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-11 23:16:34,012 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:16:35,102 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:16:35,107 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:16:38,491 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:38] "GET / HTTP/1.1" 200 -
+2025-10-11 23:16:38,827 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 23:16:40,928 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:40] "GET /dashboard HTTP/1.1" 200 -
+2025-10-11 23:16:40,996 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-11 23:16:41,003 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:41] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-10-11 23:16:41,016 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:41] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
+2025-10-11 23:16:41,036 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:41] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-10-11 23:16:41,048 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-10-11 23:16:41,056 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:41] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-10-11 23:16:41,179 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:41] "GET /conversation HTTP/1.1" 200 -
+2025-10-11 23:16:46,301 - __main__ - INFO - Processing query: High risk events from last 7 days
+2025-10-11 23:16:46,364 - __main__ - INFO - Processing query: High risk events from last 7 days
+2025-10-11 23:16:46,461 - __main__ - INFO - Query processed successfully. Found 492 events
+2025-10-11 23:16:46,465 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:46] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 23:16:46,469 - __main__ - INFO - Query processed successfully. Found 492 events
+2025-10-11 23:16:46,473 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 23:16:46] "POST /api/query HTTP/1.1" 200 -
+2025-10-11 23:17:36,902 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\api_clients.py', reloading
+2025-10-11 23:17:36,902 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\api_clients.py', reloading
+2025-10-11 23:17:37,584 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:17:37,958 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:17:39,235 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:17:39,242 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:17:39,475 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:17:39,481 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:17:41,024 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\api_clients.py', reloading
+2025-10-11 23:17:41,024 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\api_clients.py', reloading
+2025-10-11 23:17:41,025 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\api_clients.py', reloading
+2025-10-11 23:17:41,025 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\api_clients.py', reloading
+2025-10-11 23:17:41,578 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:17:41,879 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:17:43,404 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:17:43,413 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:17:43,632 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:17:43,638 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:18:08,268 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:18:08,269 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:18:08,274 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:18:08,275 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:18:09,170 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:18:09,530 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:18:11,622 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:18:11,628 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:18:11,635 - werkzeug - WARNING -  * Debugger is active!
+2025-10-11 23:18:11,644 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-11 23:20:11,686 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:20:11,686 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:20:11,687 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:20:11,688 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:20:11,689 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:20:11,689 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-11 23:20:12,641 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-11 23:20:12,670 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 00:12:58,965 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:13:00,294 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:13:00,737 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.42:5000
+2025-10-12 00:13:00,737 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 00:13:00,756 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 00:13:07,054 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:13:07,483 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:13:07,903 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 00:13:07,913 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-12 00:13:07,986 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:07] "GET / HTTP/1.1" 200 -
+2025-10-12 00:13:08,225 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 00:13:10,714 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "GET /dashboard HTTP/1.1" 200 -
+2025-10-12 00:13:10,773 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 00:13:10,814 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-10-12 00:13:10,823 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
+2025-10-12 00:13:10,855 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-10-12 00:13:10,855 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-10-12 00:13:10,871 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-10-12 00:13:11,065 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:13:11] "GET /conversation HTTP/1.1" 200 -
+2025-10-12 00:22:45,328 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:22:46,141 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:22:46,469 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.42:5000
+2025-10-12 00:22:46,469 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 00:22:46,479 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 00:22:56,896 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:22:57,439 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:22:57,959 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 00:22:57,969 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-12 00:22:58,036 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:22:58] "GET / HTTP/1.1" 200 -
+2025-10-12 00:22:58,222 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:22:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 00:23:00,387 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "GET /dashboard HTTP/1.1" 200 -
+2025-10-12 00:23:00,457 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 00:23:00,461 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-10-12 00:23:00,493 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
+2025-10-12 00:23:00,502 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-10-12 00:23:00,545 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-10-12 00:23:00,547 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-10-12 00:23:00,683 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "GET /conversation HTTP/1.1" 200 -
+2025-10-12 00:23:00,702 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 00:23:00,710 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:00] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 00:23:03,246 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 00:23:03,310 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:33:57.440440+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:33:57.440440+00:00Z, at position 0
+2025-10-12 00:23:03,333 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 00:23:03,336 - werkzeug - INFO -  * Detected change in 'C:\\Users\\HP\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas\\core\\tools\\datetimes.py', reloading
+2025-10-12 00:23:03,355 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:03] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:03,378 - werkzeug - INFO -  * Detected change in 'C:\\Users\\HP\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas\\core\\arrays\\datetimes.py', reloading
+2025-10-12 00:23:03,383 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:33:57.440440+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:33:57.440440+00:00Z, at position 0
+2025-10-12 00:23:03,390 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:03] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:04,586 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 00:23:15,119 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:23:15,529 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:23:16,025 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 00:23:16,032 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-12 00:23:16,081 - __main__ - INFO - Processing query: MITRE ATT&CK techniques
+2025-10-12 00:23:16,101 - __main__ - INFO - Processing query: MITRE ATT&CK techniques
+2025-10-12 00:23:16,103 - __main__ - INFO - Processing query: Brute force attempts yesterday
+2025-10-12 00:23:16,118 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+2025-10-12 00:23:16,121 - __main__ - INFO - Processing query: Brute force attempts yesterday
+2025-10-12 00:23:16,142 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+2025-10-12 00:23:16,145 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-10T13:05:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-10T13:05:15.529831+00:00Z, at position 0
+2025-10-12 00:23:16,152 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:16] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:16,171 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-10T13:05:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-10T13:05:15.529831+00:00Z, at position 0
+2025-10-12 00:23:16,173 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:16] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:16,176 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:16] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:16,181 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:16] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:27,794 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:27] "POST /clear HTTP/1.1" 200 -
+2025-10-12 00:23:42,766 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-12 00:23:42,784 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+2025-10-12 00:23:42,791 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:42] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:42,813 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-12 00:23:42,835 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+2025-10-12 00:23:42,844 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:42] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:48,525 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 00:23:48,543 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+2025-10-12 00:23:48,548 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:48] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:23:48,574 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 00:23:48,592 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1022, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 645, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 709, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T16:34:15.529831+00:00Z, at position 0
+2025-10-12 00:23:48,598 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:23:48] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:28:17,981 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\synthetic_data.py', reloading
+2025-10-12 00:28:19,000 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 00:28:24,420 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:28:25,081 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:28:25,385 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 00:28:25,389 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-12 00:28:51,952 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:28:51] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 00:28:51,956 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:28:51] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 00:54:15,581 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 00:54:15,598 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 00:54:16,990 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 00:54:24,787 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 00:54:25,308 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 00:54:25,832 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 00:54:25,849 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-12 00:56:02,024 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-12 00:56:02,097 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-12 00:56:02,129 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 00:56:02,131 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 00:56:02,141 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:02] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:56:02,146 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:02] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:56:04,503 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "GET /dashboard HTTP/1.1" 200 -
+2025-10-12 00:56:04,956 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
+2025-10-12 00:56:04,974 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 00:56:04,980 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-10-12 00:56:04,992 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-10-12 00:56:04,995 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-10-12 00:56:04,996 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:04] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-10-12 00:56:05,043 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:05] "GET /conversation HTTP/1.1" 200 -
+2025-10-12 00:56:05,046 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:05] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 00:56:05,056 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:05] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 00:56:14,770 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 00:56:14,793 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 00:56:14,805 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:14] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:56:14,830 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 00:56:14,853 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 00:56:14,859 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:14] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:56:16,186 - __main__ - INFO - Processing query: Show threat intelligence data
+2025-10-12 00:56:16,206 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 00:56:16,212 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:16] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 00:56:16,250 - __main__ - INFO - Processing query: Show threat intelligence data
+2025-10-12 00:56:16,269 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 00:56:16,277 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 00:56:16] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:31,279 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 01:06:32,864 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 01:06:33,366 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.42:5000
+2025-10-12 01:06:33,366 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-12 01:06:33,394 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:06:37,470 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:37] "GET / HTTP/1.1" 200 -
+2025-10-12 01:06:37,559 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 01:06:39,928 - api_clients - ERROR - Cybercrime Tracker API error: Expecting value: line 1 column 1 (char 0)
+2025-10-12 01:06:40,189 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /dashboard HTTP/1.1" 200 -
+2025-10-12 01:06:40,259 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-12 01:06:40,272 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-10-12 01:06:40,297 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "[36mGET /static/css/charts.css HTTP/1.1[0m" 304 -
+2025-10-12 01:06:40,314 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2025-10-12 01:06:40,324 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2025-10-12 01:06:40,332 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-10-12 01:06:40,337 - __main__ - INFO - Threat intelligence loaded: 0 malware samples, 0 malicious IPs, 0 attack techniques
+2025-10-12 01:06:40,501 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /conversation HTTP/1.1" 200 -
+2025-10-12 01:06:40,502 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 01:06:40,510 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 01:06:40,519 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 01:06:40,532 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:40] "GET /api/threat-intel HTTP/1.1" 200 -
+2025-10-12 01:06:40,857 - werkzeug - WARNING -  * Debugger is active!
+2025-10-12 01:06:40,865 - werkzeug - INFO -  * Debugger PIN: 122-809-695
+2025-10-12 01:06:44,917 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-12 01:06:44,958 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:44,964 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:44] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:44,968 - __main__ - INFO - Processing query: Show failed logins in the last 24 hours
+2025-10-12 01:06:44,997 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:45,002 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:45] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:52,112 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 01:06:52,132 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:52,138 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:52] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:52,172 - __main__ - INFO - Processing query: Recent malware samples analysis
+2025-10-12 01:06:52,188 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:52,193 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:52] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:54,084 - __main__ - INFO - Processing query: MITRE ATT&CK techniques
+2025-10-12 01:06:54,104 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:54,108 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:54] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:54,142 - __main__ - INFO - Processing query: MITRE ATT&CK techniques
+2025-10-12 01:06:54,160 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:54,169 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:54] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:55,297 - __main__ - INFO - Processing query: Real-time threat alerts
+2025-10-12 01:06:55,315 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:55,319 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:55] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:55,361 - __main__ - INFO - Processing query: Real-time threat alerts
+2025-10-12 01:06:55,380 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:55,384 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:55] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:57,123 - __main__ - INFO - Processing query: Top 10 users with most activity
+2025-10-12 01:06:57,141 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:57,147 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:57] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:06:57,174 - __main__ - INFO - Processing query: Top 10 users with most activity
+2025-10-12 01:06:57,196 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:06:57,203 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:06:57] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:07:07,041 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:07:07] "GET /api/autocomplete?q=hey HTTP/1.1" 200 -
+2025-10-12 01:07:07,106 - __main__ - INFO - Processing query: hey
+2025-10-12 01:07:07,124 - __main__ - ERROR - Error processing query: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+Traceback (most recent call last):
+  File "D:\AskSIEM\app.py", line 1014, in process_query
+    results = analytics_engine.process_query(parsed_query)
+  File "D:\AskSIEM\app.py", line 637, in process_query
+    analysis = self._analyze_events(enhanced_events, parsed_query)
+  File "D:\AskSIEM\app.py", line 701, in _analyze_events
+    df['timestamp'] = pd.to_datetime(df['timestamp'])
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\tools\datetimes.py", line 435, in _convert_listlike_datetimes
+    result, tz_parsed = objects_to_datetime64(
+                        ~~~~~~~~~~~~~~~~~~~~~^
+        arg,
+        ^^^^
+    ...<4 lines>...
+        allow_object=True,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\AppData\Roaming\Python\Python313\site-packages\pandas\core\arrays\datetimes.py", line 2398, in objects_to_datetime64
+    result, tz_parsed = tslib.array_to_datetime(
+                        ~~~~~~~~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<4 lines>...
+        creso=abbrev_to_npy_unit(out_unit),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "tslib.pyx", line 414, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 596, in pandas._libs.tslib.array_to_datetime
+  File "tslib.pyx", line 553, in pandas._libs.tslib.array_to_datetime
+  File "conversion.pyx", line 641, in pandas._libs.tslibs.conversion.convert_str_to_tsobject
+  File "parsing.pyx", line 336, in pandas._libs.tslibs.parsing.parse_datetime_string
+  File "parsing.pyx", line 666, in pandas._libs.tslibs.parsing.dateutil_parse
+pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unable to parse: 2025-10-11T17:05:25.309720+00:00Z, at position 0
+2025-10-12 01:07:07,128 - werkzeug - INFO - 127.0.0.1 - - [12/Oct/2025 01:07:07] "[35m[1mPOST /api/query HTTP/1.1[0m" 500 -
+2025-10-12 01:11:57,601 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 01:11:57,608 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 01:11:57,609 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 01:11:57,636 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 01:11:57,638 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
+2025-10-12 01:11:58,112 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:11:58,254 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
