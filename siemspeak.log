@@ -2269,3 +2269,11 @@ pandas._libs.tslibs.parsing.DateParseError: Unknown datetime string format, unab
 2025-10-12 01:11:57,638 - werkzeug - INFO -  * Detected change in 'D:\\AskSIEM\\app.py', reloading
 2025-10-12 01:11:58,112 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
 2025-10-12 01:11:58,254 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:16:56,488 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:16:56,525 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:50:44,177 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:50:44,550 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:54:15,933 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 01:54:15,961 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 02:02:15,426 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-12 02:02:15,487 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
