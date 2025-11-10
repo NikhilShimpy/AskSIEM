@@ -12,7 +12,7 @@
 ---
 
 ## 🚀 Live Demo
-🔗 https://ask-siem.vercel.app/ *(Replace with your deployed link)*
+🔗 https://ask-siem.vercel.app/
 
 ---
 
